@@ -1,0 +1,59 @@
+GET http://localhost:8080/v1/contacts
+#####
+GET http://localhost:8080/v1/contacts/1
+#####
+GET http://localhost:8080/v1/contacts/limited/1
+#####
+GET http://localhost:8080/v1/contacts/searchbyname?firstName=Prem&lastName=Udayan&middleName=null
+####
+GET http://localhost:8080/v1/contacts/searchbydob?firstName=Prem&lastName=Udayan&dateOfBirth=1969-01-01
+
+#############################################################
+
+POST http://localhost:8080/v1/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Prem",
+  "lastName": "Udayan"
+}
+#####
+POST http://localhost:8080/v1/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Sinduuja",
+  "middleName": "",
+  "lastName": "Prem"
+}
+#####
+POST http://localhost:8080/v1/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Preethi",
+  "lastName": "Prem",
+  "dateOfBirth": "2023-12-24"
+}
+#####
+POST http://localhost:8080/v1/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Pranav",
+  "lastName": "Prem"
+}
+######################################################
+
+PUT http://localhost:8080/v1/contacts/update/1
+Content-Type: application/json
+
+{
+  "middleName": "Pillai",
+  "dateOfBirth": "1969-01-01"
+
+}
+#####
+DELETE http://localhost:8080/v1/contacts/4
+
+#####

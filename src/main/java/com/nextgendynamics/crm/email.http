@@ -1,0 +1,68 @@
+#############################################################
+GET http://localhost:8080/v1/contactemails/emailbyid?contactEmailId=1
+Authorization: Basic 387e3d09-23d2-4a07-ab88-c208ec670a62
+Accept: application/json
+
+#####
+
+GET http://localhost:8080/v1/contactemails/emailbyid?contactEmailId=1
+Authorization: Basic Mzg3ZTNkMDktMjNkMi00YTA3LWFiODgtYzIwOGVjNjcwYTYy
+Accept: application/json
+
+
+#####
+GET http://localhost:8080/v1/contactemails/emailbycontactid?contactId=1
+
+#############################################################
+POST http://localhost:8080/v1/contactemails/addEmail?contactId=1
+Content-Type: application/json
+
+{
+  "emailAddress": "prem_udayan@yahoo.com",
+  "emailType": "H",
+  "isPrimary": true
+}
+####
+
+POST http://localhost:8080/v1/contactemails/addEmail?contactId=1
+Content-Type: application/json
+
+{
+"emailAddress": "uprem@nea.org",
+"emailType": "W"
+}
+#####
+POST http://localhost:8080/v1/contactemails/addEmail?contactId=1
+Content-Type: application/json
+
+{
+  "emailAddress": "prem_other@yahoo.com",
+  "emailType": "O"
+}
+
+######################################################
+
+PUT http://localhost:8080/v1/contactemails/updateContactEmail?contactId=1
+Content-Type: application/json
+
+{
+  "emailAddress": "premudayan@yahoo.com",
+  "emailType": "H"
+}
+####
+PUT http://localhost:8080/v1/contactemails/contact/updateEmail?contactId=1&id=1
+Content-Type: application/json
+
+{
+  "emailAddress": "prem_udayan@yahoo.com",
+  "emailType": "H"
+}
+#####
+DELETE http://localhost:8080/v1/contactemails/deleteEmail?id=18
+#####
+DELETE http://localhost:8080/v1/contactemails/deleteContactEmail?contactId=1
+Content-Type: application/json
+
+{
+  "emailType": "O"
+}
